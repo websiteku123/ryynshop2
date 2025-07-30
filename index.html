@@ -1251,8 +1251,6 @@ DAPAT APK PREM 10</p>
             audio.play().catch(e => {
                 console.warn("Autoplay was prevented:", e);
                 const playButton = document.createElement('button');
-                playButton.textContent = 'Putar Audio Latar';
-                playButton.style.cssText = 'position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 10px 20px; background-color: var(--accent-color); color: var(--button-text-color); border: none; border-radius: 5px; cursor: pointer;';
                 playButton.onclick = () => {
                     audio.play();
                     playButton.remove();
@@ -1260,6 +1258,7 @@ DAPAT APK PREM 10</p>
                 document.body.appendChild(playButton);
             });
         }
+
 
         // --- Name Input Modal ---
         const nameInputModal = document.getElementById('nameInputModal');
